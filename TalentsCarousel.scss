@@ -1,0 +1,160 @@
+$componentHeight: 150px;
+
+.talent-carousel-component {
+  //background-color: green;
+
+  padding: 2px;
+  position: relative;
+
+  .prev-button {
+    background-color: rgba(0,0,0,.3);
+
+    width: 46px;
+    height: $componentHeight;
+    position: relative;
+    float: left;
+    display: none;
+    cursor: pointer;
+
+    &:hover i {
+      opacity: 1.0;
+    }
+
+    i {
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 50%;
+      height: 30%;
+      margin: auto;
+    }
+  }
+
+  .next-button {
+    background-color: rgba(0,0,0,.3);
+
+    width: 46px;
+    height: $componentHeight;
+    position: relative;
+    float: right;
+    display: none;
+    cursor: pointer;
+
+    &:hover i {
+      opacity: 1.0;
+    }
+
+    i{
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 50%;
+      height: 30%;
+      margin: auto;
+    }
+  }
+
+  .visible-area {
+    //background-color: red;
+
+    // only with buttons
+    // width: calc(100% - (46px * 2));
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    height: $componentHeight;
+
+    .talent-slides {
+      //background-color: yellow;
+
+      transition: transform .3s ease-out;
+      //width: calc(92px * 5); // TEST
+      height: $componentHeight;
+      position: relative;
+      top: 0;
+      left: 0; // change with left and right
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .pic-talent-component {
+        width: 92px;
+        height: $componentHeight;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        //background-color: palegreen;
+
+        .avatar {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-clip: padding-box;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 12px;
+          background-size: cover;
+          background-position: center center;
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin-bottom: 12px;
+        }
+
+        .talent-name {
+          display: block;
+          font-family: Roboto, sans-serif;
+          font-size: 12px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: #ffffff;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 28px;
+        }
+
+        .talent-role {
+          display: block;
+          font-family: Roboto, sans-serif;
+          font-size: 11px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: #ffffff;
+          padding-top: 5px;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 31px;
+        }
+      }
+    }
+
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
